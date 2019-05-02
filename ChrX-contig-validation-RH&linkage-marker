@@ -1,0 +1,37 @@
+################################################################################################
+ #running blast using hdmap markers downloaded from roslin ArkDB(ePCR)#
+################################################################################################
+# hdmap vs dam #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject maternal.arrow.fasta  -query ~/RHmap_ePCRseq.fa -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >testingvssalsa_f1damepcr.txt
+
+# hdmap vs sire #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject paternal.arrow.fasta  -query ~/RHmap_ePCRseq.fa -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >testingvssalsa_f1sireepcr.txt
+
+################################################################################################
+ ##running blast using hdmap markers downloaded from roslin ArkDB(genomics) #
+################################################################################################
+# hdmap vs dam #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject maternal.arrow.fasta  -query  ~/RHmap_genomicseq.fa -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >testingvssalsa_f1damgenomic.txt
+
+# hdmap vs sire #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject aternal.arrow.fasta  -query  ~/RHmap_genomicseq.fa -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >testingvssalsa_f1siregenomic.txt
+
+################################################################################################
+ ##running blast using hdmap markers downloaded from (itoh et al, 2005) ##
+################################################################################################
+# hdmap vs dam #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject maternal.arrow.fasta  -query ~/seq_RHmapv2_Xonly.fasta -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >RHmapv2vssalsa_f1dam.txt
+
+# hdmap vs sire #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject aternal.arrow.fasta  -query ~/seq_RHmapv2_Xonly.fasta -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >RHmapv2vssalsa_f1sire.txt
+
+################################################################################################
+ ##running blastn using linkage map markers downloaded from USDA-MARC Bovine Map ##
+################################################################################################
+# hdmap vs dam #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject maternal.arrow.fasta  -query ~/seq_RHmapv2_Xonly.fasta -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >linkagemapvssalsa_f1dam.txt
+
+# hdmap vs sire #
+Downloads/ncbi-blast-2.6.0+/bin/blastn -subject aternal.arrow.fasta  -query ~/seq_RHmapv2_Xonly.fasta -outfmt "6 qseqid sseqid qlen slen qstart qend sstart send length mismatch gaps" -max_hsps 3 -perc_identity 90 -qcov_hsp_perc 80 >linkagemapvssalsa_f1sire.txt
+
+
